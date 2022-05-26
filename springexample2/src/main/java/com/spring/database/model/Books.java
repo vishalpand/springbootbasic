@@ -1,6 +1,7 @@
 package com.spring.database.model;
 
-import javax.persistence.Column;  
+import javax.persistence.Column; 
+ 
 import javax.persistence.Entity;  
 import javax.persistence.Id;  
 import javax.persistence.Table;  
@@ -10,6 +11,10 @@ import javax.persistence.Table;
 @Table  
 public class Books  
 {  
+public Books() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 //Defining book id as primary key  
 @Id  
 @Column  
@@ -47,6 +52,15 @@ this.author = author;
 public int getPrice()   
 {  
 return price;  
+}
+
+public void setPrice(int price) {
+	this.price = price;
+}
+@Override
+public String toString() {
+	return "Books [bookid=" + bookid + ", bookname=" + bookname + ", author=" + author + ", price=" + price + "]";
 }  
+
 
 }
